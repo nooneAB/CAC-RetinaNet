@@ -1,0 +1,34 @@
+_BASE_: "../Base-RCNN-FPN.yaml"
+OUTPUT_DIR: "work_dirs/model_test"
+
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  RESNETS:
+    DEPTH: 50
+  FPN:
+    IN_FEATURES: [ "res2", "res3", "res4", "res5" ]
+  ANCHOR_GENERATOR:
+    SIZES: [ [ 32 ], [ 64 ], [ 128 ], [ 256 ], [ 512 ] ]  # One size for each in feature map
+    ASPECT_RATIOS: [ [ 0.5, 1.0, 2.0 ] ]  # Three aspect ratios (same for all in feature maps)
+  DEVICE: "cuda"
+  
+
+SOLVER:
+  # 3x
+  # STEPS: (210000, 250000)
+  # MAX_ITER: 270000
+
+  # 1x
+  STEPS: (30000, 40000)
+  MAX_ITER: 50000
+  CLIP_GRADIENTS:
+    ENABLED: False
+
+META_INFO:
+  EVAL_GPU_TIME: True
+
+
+TEST:
+  EVAL_PERIOD: 5000
+  DETECTIONS_PER_IMAGE: 200
