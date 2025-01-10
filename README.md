@@ -22,17 +22,17 @@ python train_coco.py --config-file configs/coco/CSQ.train.yaml --num-gpu X OUTPU
 
 Test(The first is normal inference and the second is query inference)
 =
-python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test   
-python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test MODEL.QUERY.QUERY_INFER True  
+        python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test    
+        python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test MODEL.QUERY.QUERY_INFER True    
 
 Citation
 =
-@InProceedings{
-    author    = {{Jiazhen Li,Xuanhong Wang,Hongyu Guo,Xian Wang,Mingchen Wang}},
-    title     = {{Enhanced Small Target Detection in Optical Remote Sensing Images using CAC-RetinaNet with Multi-Scale Feature Fusion and Context Attention},
-    journal =   {The Visual Computer},
-    year      = {2025}
-}
+        @InProceedings{  
+            author    = {{Jiazhen Li,Xuanhong Wang,Hongyu Guo,Xian Wang,Mingchen Wang}},  
+            title     = {{Enhanced Small Target Detection in Optical Remote Sensing Images using CAC-RetinaNet with Multi-Scale Feature Fusion and Context Attention},  
+            journal =   {The Visual Computer},  
+            year      = {2025}  
+        }  
 
 
 
