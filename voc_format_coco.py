@@ -15,11 +15,6 @@ PRE_DEFINE_CATEGORIES = {}
 #  "cow": 10, "diningtable": 11, "dog": 12, "horse": 13,
 #  "motorbike": 14, "person": 15, "pottedplant": 16,
 #  "sheep": 17, "sofa": 18, "train": 19, "tvmonitor": 20}
-PRE_DEFINE_CATEGORIES = { "airplane":0, "airport":1, "baseballfield":2, "basketballcourt":3, "bridge":4, "chimney":5,
-                          "dam":6, "Expressway-Service-area":7, "Expressway-toll-station":8, "golffield":9, "groundtrackfield":10,
-                          "harbor":11,"overpass":12,"ship":13, "stadium":14, "storagetank":15, "tenniscourt":16, "trainstation":17,
-                          "vehicle":18, "windmill":19}
-
 
 def get(root, name):
     vars = root.findall(name)
@@ -51,7 +46,7 @@ def convert(xml_list, xml_dir, json_file):
                  "categories": []}
     categories = PRE_DEFINE_CATEGORIES
     bnd_id = START_BOUNDING_BOX_ID
-    image_counter = 0  # 添加一个计数器变量
+    image_counter = 0  
 
     for line in list_fp:
         line = line.strip()
@@ -69,8 +64,8 @@ def convert(xml_list, xml_dir, json_file):
             raise NotImplementedError('%d paths found in %s' % (len(path), line))
         ## The filename must be a number
         # image_id = get_filename_as_int(filename)
-        image_id = image_counter  # 使用计数器作为image的id
-        image_counter += 1  # 递增计数器
+        image_id = image_counter  
+        image_counter += 1  
         size = get_and_check(root, 'size', 1)
         width = int(get_and_check(size, 'width', 1).text)
         height = int(get_and_check(size, 'height', 1).text)
@@ -114,8 +109,6 @@ def convert(xml_list, xml_dir, json_file):
 
 if __name__ == '__main__':
     xml_list = r'E:/DIOR/ImageSets/Main/beifen/all.txt'
-    # xml_list = './data/VOCdevkit/ImageSets/Main/val.txt'
     xml_dir = r'E:/DIOR/Annotations'
-    # json_dir = './data/COCO/annotations/test.json'  # 注意！！！这里test.json先要自己创建，不然
     json_dir = r'E:/7/all.json'
     convert(xml_list, xml_dir, json_dir)
