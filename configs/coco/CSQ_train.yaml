@@ -1,5 +1,5 @@
 _BASE_: "../BaseRetina.yaml"
-OUTPUT_DIR: "work_dirs/coco_querydet"
+OUTPUT_DIR: "work_dirs/coco_CSQ"
 
 MODEL:
   META_ARCHITECTURE: "RetinaNetQueryDet"
