@@ -18,7 +18,7 @@ You need to set up COCO following the official tutorial of Detectron2.
 
 Train
 =
-python train_coco.py --config-file configs/coco/CSQ.train.yaml --num-gpu X OUTPUT_DIR work_dirs/coco_CSQ  
+                python train_coco.py --config-file configs/coco/CSQ.train.yaml --num-gpu X OUTPUT_DIR work_dirs/coco_CSQ  
 
 Test(The first is normal inference and the second is query inference)
 =
