@@ -18,12 +18,12 @@ You need to set up COCO following the official tutorial of Detectron2.
 
 Train
 =
-                python train_coco.py --config-file configs/coco/CSQ.train.yaml --num-gpu X OUTPUT_DIR work_dirs/coco_CSQ  
+    python train_coco.py --config-file configs/coco/CSQ.train.yaml --num-gpu X OUTPUT_DIR work_dirs/coco_CSQ  
 
 Test(The first is normal inference and the second is query inference)
 =
-        python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test    
-        python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test MODEL.QUERY.QUERY_INFER True    
+    python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test    
+    python infer_coco.py --config-file configs/coco/CSQ_test.yaml --num-gpu X --eval-only MODEL.WEIGHTS work_dirs/coco_CSQ/model_final.pth OUTPUT_DIR work_dirs/model_test MODEL.QUERY.QUERY_INFER True    
 
 Citation
 =
