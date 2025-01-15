@@ -1,6 +1,13 @@
+Environment setting
+=
+
+Pytorch1.10.1+Cuda11.3+Nvidia 4090 24GB  
+
 Doi
 =
-         https://doi.org/10.5281/zenodo.14627521  
+
+https://doi.org/10.5281/zenodo.14627521    
+
 Datasets  
 ====
 The datasets used in this paper are DIOR and Levir-SHIP.  
