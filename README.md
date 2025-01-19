@@ -2,10 +2,11 @@ Environment setting
 =
 
 Pytorch1.10.1+Cuda11.3+Nvidia 4090 24GB  
+detectron2 is a core library that needs to be installed in your virtual environment, and the version we recommend here is 0.6.  
+To install due to https://github.com/facebookresearch/detectron2/releases.
 
 Doi
 =
-
 https://doi.org/10.5281/zenodo.14627521    
 
 Datasets  
@@ -15,8 +16,7 @@ DIOR:
 You can download it here:https://aistudio.baidu.com/datasetdetail/15179  
 Levir-ship: 
 You can download it here:https://github.com/WindVChen/Levir-Ship  
-`The detectron2 framework in this project is for reference only, please go to the official website for specific use.`
-https://detectron2-zhcn.readthedocs.io/zh-cn/latest/index.html  
+
 
 Datasets format conversion
 =
@@ -25,6 +25,7 @@ Because detectron2 supports coco formats, follow voc_format_coco.py
 COCO setting
 =
 You need to set up COCO following the official tutorial of Detectron2.  
+https://detectron2-zhcn.readthedocs.io/zh-cn/latest/index.html  
 
 Train
 =
