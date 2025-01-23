@@ -1,3 +1,13 @@
+Title
+=
+
+《Enhanced Small Target Detection in Optical Remote Sensing Images using CAC-RetinaNet with Multi-Scale Feature Fusion and Context Attention》    
+
+journal
+=
+
+《The Visual Computer》  
+
 Environment setting
 =
 
